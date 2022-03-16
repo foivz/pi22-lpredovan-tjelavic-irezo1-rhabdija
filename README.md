@@ -1,36 +1,43 @@
-# Inicijalne upute za prijavu projekta iz Programskog inženjerstva
-
-Poštovane kolegice i kolege, 
-
-čestitamo vam jer ste uspješno prijavili svoj projektni tim na kolegiju Programsko inženjerstvo, te je za vas automatski kreiran repozitorij koji ćete koristiti za verzioniranje vašega koda, ali i za pisanje dokumentacije.
-
-Ovaj dokument (README.md) predstavlja **osobnu iskaznicu vašeg projekta**. Vaš prvi zadatak, ukoliko niste odabrali da želite raditi na projektu sa nastavnicima ili u sklopu WBL-a je **prijaviti vlastiti projektni prijedlog** na način da ćete prijavu vašeg projekta, sukladno uputama danim u ovom tekstu, napisati upravo u ovaj dokument, umjesto ovoga teksta.
-
-Za upute o sintaksi koju možete koristiti u ovom dokumentu i kod pisanje vaše projektne dokumentacije pogledajte [ovaj link](https://guides.github.com/features/mastering-markdown/).
-Sav programski kod potrebno je verzionirati u glavnoj **master** grani i **obvezno** smjestiti u mapu Software. Sve artefakte (npr. slike) koje ćete koristiti u vašoj dokumentaciju obvezno verzionirati u posebnoj grani koja je već kreirana i koja se naziva **master-docs** i smjestiti u mapu Documentation.
-
-Nakon vaše prijave bit će vam dodijeljen mentor s kojim ćete tijekom semestra raditi na ovom projektu. A sada, vrijeme je da prijavite vaš projekt. Za prijavu vašeg projektnog prijedloga molimo vas koristite **predložak** koji je naveden u nastavku, a započnite tako da kliknete na *olovku* u desnom gornjem kutu ovoga dokumenta :) 
-
-# Naziv projekta
-(u redak iznad navedite kratki proizvoljni naziv projekta prikladan akademskoj zajednici, a ovaj tekst obrišite)
+# FoundIT
 
 ## Projektni tim
-
-Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
+Ime i prezime | E-mail adresa (FOI) | JMBAG | GitHub korisničko ime
 ------------  | ------------------- | ----- | ---------------------
-Ime i prezime | mojaadresa@foi.hr | 000000000 | githubuser
-Ime i prezime | ... | ... | ...
+Lara Predovan | lpredovan@foi.hr | 0016143713 | lpredovan
+Tea Jelavić | tjelavic@foi.hr | 0016142074 | tjelavic5
+Iva Rezo | irezo1@foi.hr | 0066310652 | irezo1
+Robert Habdija | rhabdija@foi.hr | 0016142191 | HabacJr
 
 ## Opis domene
-Umjesto ovih uputa opišite domenu ili problem koji pokrivate vašim  projektom. Domena može biti proizvoljna, ali obratite pozornost da sukladno ishodima učenja, domena omogući primjenu zahtijevanih koncepata kako je to navedeno u sljedećem poglavlju. Priložite odgovarajuće skice gdje je to prikladno.
+Cilj ove aplikacije sa korisničke strane je olakšana kupovina knjiga i stripova preko aplikacije. Korisnicima se na izbor daje žele li osobno pokupiti naručene knjige ili žele da se knjige njima dostave. Sa administratorske strane, ova bi aplikacija olakšala vođenje evidencije knjiga, prikazivanje promjena u radnom vremenu te objava nadolazećih događaja u poslovnici.
 
 ## Specifikacija projekta
-Umjesto ovih uputa opišite zahtjeve za funkcionalnošću programskog proizvoda. Pobrojite osnovne funkcionalnosti i za svaku naznačite ime odgovornog člana tima. Opišite buduću arhitekturu programskog proizvoda. Obratite pozornost da bi arhitektura trebala biti višeslojna s odvojenom (dislociranom) bazom podatka. Također uzmite u obzir da bi svaki član tima treba biti odgovorana za otprilike 3 funkcionalnosti, te da bi opterećenje članova tima trebalo biti ujednačeno. Priložite odgovarajuće dijagrame i skice gdje je to prikladno. Funkcionalnosti sustava bobrojite u tablici ispod koristeći predložak koji slijedi:
-
 Oznaka | Naziv | Kratki opis | Odgovorni član tima
 ------ | ----- | ----------- | -------------------
-F01 | Login | Za pristup dnevniku potrebnba je autentikacija korisnika pomoću login funkcionalnosti. Korisnik se logira s podacima koji su mu dodijeljeni prilikom ... | Zlatko Stapić
-F02 | Pregled dnevnika | .... | ...
+
+F01 | Registracija | Korisnik se mora registrirati kako bi mogao pristupiti aplikaciji. Admini ne moraju odraditi registraciju te imaju pre-made račune. | Iva Rezo
+
+F02 | Login | Korisnik aplikacije mora se prijaviti kao kupac ili admin. | Iva Rezo
+
+F03 | Baza podataka | Izrada baza podataka u koje će se spremati informacije o knjigama, stanjima na skladištu, računi i sl. | Tea Jelavić
+
+F04 | Korisničko sučelje | Korisnici mogu prilagođavati korisničko sučelje prema svojim preferencama. | Lara Predovan
+
+F05 | Aktualne informacije o poslovnici | Unutar aplikacije je vidljivo radno vrijeme, promjene u radnom vremenu, lokacija, ime osobe koja trenutno radi i sl. | Lara Predovan
+
+F06 | Pretraživanje i sortiranje dostupnih i nedostupnih knjiga | Kupac može pretraživati knjige po autorima, žanrovima, ključnoj riječi, vrsti uveza i sl. te ih sortirati prema abecedi, relevantnosti i sl. | Robert Habdija
+
+F07 | Kupnja knjiga | Kupac može kupiti proizvoljan broj knjiga koje prije plaćanja ulaze u košaricu. | Robert Habdija
+
+F08 | Dostava knjiga | Postoji mogućnost dostave knjiga preko više različitih dostavnih službi, ali i mogućnost da kupac osobno pokupi naručene knjige. | Lara Predovan
+
+F09 | Recenziranje knjiga | Kupac može recenzirati knjigu nakon kupnje. Recenzija se može sastojati od ocjene i/ili komentara od strane autora recenzije. | Tea Jelavić
+
+F10 | Favoriti i lista želja | Korisnik ima mogućnost staviti knjige u favorite ili na listu želja te korisnici mogu vidjeti favorite i liste želja ostalih korisnika. | Tea Jelavić
+
+F11 | Novosti | Aplikacija prikazuje novosti vezane uz poslovnicu te događaje koji se održavaju u istoj. | Iva Rezo
+
+F12 | Statistika | Korisnici mogu vidjeti podatke o najprodavanijim knjigama općenito, najprodavanijim knjigama po žanrovima, najbolje ocijenjenim knjigama i sl. | Robert Habdija
 
 ## Tehnologije i oprema
-Umjesto ovih uputa jasno popišite sve tehnologije, alate i opremu koju ćete koristiti pri implementaciji vašeg rješenja. Ne zaboravite planirati korištenje tehnologija u aktivnostima kao što su projektni menadžment ili priprema dokumentacije. Tehnologije koje ćete koristiti bi trebale biti javno dostupne, a ako ih ne budemo obrađivali na vježbama u vašoj dokumentaciji ćete morati navesti način preuzimanja, instaliranja i korištenja onih tehnologija koje su neopbodne kako bi se vaš programski proizvod preveo i pokrenuo. Pazite da svi alati koje ćete koristiti moraju imati odgovarajuću licencu.
+Visual Studio Community 2019, draw.io, GitHub, GitHub Classroom, SQLite, Visual Paradigm, MS Word
