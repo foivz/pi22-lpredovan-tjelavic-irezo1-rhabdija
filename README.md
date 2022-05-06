@@ -28,4 +28,4 @@ F11 | Interna statistika | Admini mogu vidjeti detaljnu internu statistiku što 
 F12 | Statistika | Korisnici mogu vidjeti podatke o najprodavanijim knjigama općenito, najprodavanijim knjigama po žanrovima, najbolje ocijenjenim knjigama i sl. | Robert Habdija
 
 ## Tehnologije i oprema
-Visual Studio Community 2019, draw.io, GitHub, GitHub Classroom, SQLite, Visual Paradigm, MS Word
+Visual Studio Community 2019, draw.io, GitHub, GitHub Classroom, MS SQL, MS SQL Server Management Studio, Visual Paradigm, MS Word
