@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoundIT", "FoundIT\FoundIT.csproj", "{1662C3BF-8C45-4073-9E78-9901D4D4150B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1662C3BF-8C45-4073-9E78-9901D4D4150B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1662C3BF-8C45-4073-9E78-9901D4D4150B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1662C3BF-8C45-4073-9E78-9901D4D4150B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1662C3BF-8C45-4073-9E78-9901D4D4150B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B99C5CEB-AC7B-4429-8466-E0024DF7C179}
+	EndGlobalSection
+EndGlobal
