@@ -45,6 +45,7 @@ namespace FoundIT.UserControls
             this.adresaTextInput = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.kontaktTextInput = new System.Windows.Forms.TextBox();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
             // 
             // label1
@@ -191,6 +192,10 @@ namespace FoundIT.UserControls
             this.kontaktTextInput.Size = new System.Drawing.Size(186, 22);
             this.kontaktTextInput.TabIndex = 22;
             // 
+            // helpProvider1
+            // 
+            this.helpProvider1.HelpNamespace = "FoundIT.chm";
+            // 
             // RegistracijaUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -212,7 +217,10 @@ namespace FoundIT.UserControls
             this.Controls.Add(this.prijavaClick);
             this.Controls.Add(this.uxGreskaOutput);
             this.Controls.Add(this.label1);
+            this.helpProvider1.SetHelpKeyword(this, "registracija");
+            this.helpProvider1.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.KeywordIndex);
             this.Name = "RegistracijaUC";
+            this.helpProvider1.SetShowHelp(this, true);
             this.Size = new System.Drawing.Size(800, 450);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -237,5 +245,6 @@ namespace FoundIT.UserControls
         private System.Windows.Forms.TextBox adresaTextInput;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox kontaktTextInput;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }

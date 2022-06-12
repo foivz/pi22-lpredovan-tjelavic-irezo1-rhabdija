@@ -39,6 +39,7 @@ namespace FoundIT.UserControls
             this.registracijaClick = new System.Windows.Forms.Button();
             this.uxGreskaOutput = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
             // 
             // label1
@@ -127,6 +128,10 @@ namespace FoundIT.UserControls
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // helpProvider1
+            // 
+            this.helpProvider1.HelpNamespace = "FoundIT.chm";
+            // 
             // PrijavaUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -141,7 +146,10 @@ namespace FoundIT.UserControls
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.helpProvider1.SetHelpKeyword(this, "prijava");
+            this.helpProvider1.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.KeywordIndex);
             this.Name = "PrijavaUC";
+            this.helpProvider1.SetShowHelp(this, true);
             this.Size = new System.Drawing.Size(800, 450);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -160,5 +168,6 @@ namespace FoundIT.UserControls
         private System.Windows.Forms.Button registracijaClick;
         private System.Windows.Forms.TextBox uxGreskaOutput;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }

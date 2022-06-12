@@ -39,6 +39,7 @@ namespace FoundIT.Forms
             this.label5 = new System.Windows.Forms.Label();
             this.uxDatumInput = new System.Windows.Forms.DateTimePicker();
             this.uxDodajClick = new System.Windows.Forms.Button();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
             // 
             // label1
@@ -130,6 +131,10 @@ namespace FoundIT.Forms
             this.uxDodajClick.UseVisualStyleBackColor = true;
             this.uxDodajClick.Click += new System.EventHandler(this.uxDodajClick_Click);
             // 
+            // helpProvider1
+            // 
+            this.helpProvider1.HelpNamespace = "FoundIT.chm";
+            // 
             // DodajNovost
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -145,7 +150,10 @@ namespace FoundIT.Forms
             this.Controls.Add(this.uxNaslovInput);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.helpProvider1.SetHelpKeyword(this, "dodaj_novost");
+            this.helpProvider1.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.KeywordIndex);
             this.Name = "DodajNovost";
+            this.helpProvider1.SetShowHelp(this, true);
             this.Text = "DodajNovost";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -164,5 +172,6 @@ namespace FoundIT.Forms
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker uxDatumInput;
         private System.Windows.Forms.Button uxDodajClick;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }

@@ -32,6 +32,7 @@ namespace FoundIT.UserControls
             this.uxPrikazClick = new System.Windows.Forms.Button();
             this.uxControlFlow = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
             // 
             // uxPrikazClick
@@ -62,6 +63,10 @@ namespace FoundIT.UserControls
             this.label1.TabIndex = 28;
             this.label1.Text = "Top knjige";
             // 
+            // helpProvider1
+            // 
+            this.helpProvider1.HelpNamespace = "FoundIT.chm";
+            // 
             // NaslovnicaKnjigeUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -69,7 +74,10 @@ namespace FoundIT.UserControls
             this.Controls.Add(this.label1);
             this.Controls.Add(this.uxControlFlow);
             this.Controls.Add(this.uxPrikazClick);
+            this.helpProvider1.SetHelpKeyword(this, "top_knjige");
+            this.helpProvider1.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.KeywordIndex);
             this.Name = "NaslovnicaKnjigeUC";
+            this.helpProvider1.SetShowHelp(this, true);
             this.Size = new System.Drawing.Size(1136, 635);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -81,5 +89,6 @@ namespace FoundIT.UserControls
         private System.Windows.Forms.Button uxPrikazClick;
         private System.Windows.Forms.FlowLayoutPanel uxControlFlow;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }

@@ -59,6 +59,7 @@ namespace FoundIT.UserControls
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.slikaClick = new System.Windows.Forms.Button();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.artiklBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -360,6 +361,10 @@ namespace FoundIT.UserControls
             this.slikaClick.UseVisualStyleBackColor = true;
             this.slikaClick.Click += new System.EventHandler(this.slikaClick_Click);
             // 
+            // helpProvider1
+            // 
+            this.helpProvider1.HelpNamespace = "FoundIT.chm";
+            // 
             // MojProfilUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -372,7 +377,10 @@ namespace FoundIT.UserControls
             this.Controls.Add(this.label1);
             this.Controls.Add(this.naslovOutput);
             this.Controls.Add(this.dataGridView1);
+            this.helpProvider1.SetHelpKeyword(this, "moj_profil");
+            this.helpProvider1.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.KeywordIndex);
             this.Name = "MojProfilUC";
+            this.helpProvider1.SetShowHelp(this, true);
             this.Size = new System.Drawing.Size(1136, 635);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.artiklBindingSource)).EndInit();
@@ -419,5 +427,6 @@ namespace FoundIT.UserControls
         private System.Windows.Forms.Button obavijestSpremiClick;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button slikaClick;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }
