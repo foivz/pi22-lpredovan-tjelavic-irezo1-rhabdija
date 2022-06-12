@@ -72,6 +72,7 @@ namespace FoundIT.UserControls
             this.DodajNovostClick.TabIndex = 29;
             this.DodajNovostClick.Text = "Dodaj novost";
             this.DodajNovostClick.UseVisualStyleBackColor = true;
+            this.DodajNovostClick.Visible = false;
             this.DodajNovostClick.Click += new System.EventHandler(this.DodajNovostClick_Click);
             // 
             // NaslovnicaNovostiUC
