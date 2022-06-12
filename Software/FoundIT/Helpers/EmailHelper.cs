@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace FoundIT.Helpers
 {
+    // Iva rezo
     static public class EmailHelper
     {
         static public void PosaljiEmailNovost(Novost nv, Korisnik k)

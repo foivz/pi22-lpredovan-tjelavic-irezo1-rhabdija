@@ -12,6 +12,7 @@ using ValidacijaUnosa;
 
 namespace FoundIT.UserControls
 {
+    // Iva rezo
     public partial class MojProfilUC : UserControl
     {
         private Korisnik trenutniKorisnik;

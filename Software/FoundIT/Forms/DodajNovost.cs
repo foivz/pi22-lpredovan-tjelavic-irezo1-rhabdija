@@ -12,6 +12,7 @@ using FoundIT.Helpers;
 
 namespace FoundIT.Forms
 {
+    // Iva rezo
     public partial class DodajNovost : Form
     {
         private Korisnik trenutniKorisnik;

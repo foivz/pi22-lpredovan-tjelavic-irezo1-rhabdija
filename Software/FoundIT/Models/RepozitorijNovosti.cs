@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace FoundIT.Models
 {
+    // Iva rezo
     public class RepozitorijNovosti
     {
         static public List<Novost> ListaNovosti = new List<Novost>();

@@ -12,6 +12,7 @@ using System.Windows.Forms;
 
 namespace FoundIT.UserControls
 {
+    // Iva rezo
     public partial class NaslovnicaKnjigeUC : UserControl
     {
         private Korisnik trenutniKorisnik;

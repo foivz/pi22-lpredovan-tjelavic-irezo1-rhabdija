@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace ValidacijaUnosa
 {
+    // Iva rezo
     public class Validacija
     {
         //izvor microsoft

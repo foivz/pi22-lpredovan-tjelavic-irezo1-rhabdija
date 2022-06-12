@@ -13,6 +13,7 @@ using System.Windows.Forms;
 
 namespace FoundIT
 {
+    // Iva rezo
     public partial class PrijavaRegistracijaForma : Form
     {
         public UserControl uxTrenutniSadrzaj;

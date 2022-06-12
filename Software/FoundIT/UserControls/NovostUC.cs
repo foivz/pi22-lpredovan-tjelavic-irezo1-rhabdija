@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 namespace FoundIT.UserControls
 {
+    // Iva rezo
     public partial class NovostUC : UserControl
     {
         private Novost novost;
