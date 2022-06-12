@@ -17,7 +17,7 @@ namespace FoundIT.Models
         static public void DodajKorisnika(Korisnik korisnik)
         {
             int status = RepozitorijPomPodataka.Uloga.FirstOrDefault(x => x.Value == korisnik.Status).Key;
-            string upit = String.Format("INSERT INTO korisnik values ({0},'{1}','{2}','{3}','{4}','{5}','{6}',{7});", status, korisnik.Ime, korisnik.Prezime, korisnik.Email, korisnik.Lozinka, korisnik.Adresa, korisnik.Kontakt, 1);
+            string upit = String.Format("INSERT INTO korisnik values ({0},'{1}','{2}','{3}','{4}','{5}','{6}',{7}, null);", status, korisnik.Ime, korisnik.Prezime, korisnik.Email, korisnik.Lozinka, korisnik.Adresa, korisnik.Kontakt, 1);
             BazaPodataka.Instanca.IzvrsiUpit(upit);
         }
 
@@ -64,7 +64,19 @@ namespace FoundIT.Models
 
         public static void PromjeniPrimitakObavijesti(int idKorisnika, int primaj)
         {
-            string upit = String.Format("UPDATE korisnik SET obavijest={0} where id_korisnika={1};", primaj, idKorisnika);
+            string upit = String.Format("UPDATE korisnik SET obavijest={0} where id_korisnik={1};", primaj, idKorisnika);
+            BazaPodataka.Instanca.IzvrsiUpit(upit);
+        }
+
+        public static void PromjeniEmail(int idKorisnika, string email)
+        {
+            string upit = String.Format("UPDATE korisnik SET email='{0}' where id_korisnik={1};", email, idKorisnika);
+            BazaPodataka.Instanca.IzvrsiUpit(upit);
+        }
+
+        public static void PromjeniLozinku(int idKorisnika, string lozinka)
+        {
+            string upit = String.Format("UPDATE korisnik SET lozinka='{0}' where id_korisnik={1};", lozinka, idKorisnika);
             BazaPodataka.Instanca.IzvrsiUpit(upit);
         }
 

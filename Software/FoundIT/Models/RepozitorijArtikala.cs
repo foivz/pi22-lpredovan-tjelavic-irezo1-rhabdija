@@ -63,5 +63,31 @@ namespace FoundIT.Models
             var artikliSortirani = dictFavorita.OrderByDescending(x => x.Value).Select(y=>y.Key);
             return artikliSortirani.ToList();
         }
+
+        static public List<int> DohvatiMojeArtikle(int idK)
+        {
+            List<int> mojiArtikli = new List<int>();
+            List<int> mojiRacuni = new List<int>();
+            string upit = String.Format("select id_racun from racun where id_korisnik={0};",idK);
+            SqlDataReader reader = BazaPodataka.Instanca.DohvatiDataReader(upit);
+            while (reader.Read())
+            {
+                int id = int.Parse(reader["id_racun"].ToString());
+                mojiRacuni.Add(id);
+            }
+            reader.Close();
+            foreach(int x in mojiRacuni)
+            {
+                upit = String.Format("select id_artikl from artikl_racun where id_racun={0};", x);
+                reader = BazaPodataka.Instanca.DohvatiDataReader(upit);
+                while (reader.Read())
+                {
+                    int id = int.Parse(reader["id_artikl"].ToString());
+                    mojiArtikli.Add(id);
+                }
+                reader.Close();
+            }
+            return mojiArtikli;
+        }
     }
 }

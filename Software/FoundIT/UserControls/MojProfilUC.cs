@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ValidacijaUnosa;
 
 namespace FoundIT.UserControls
 {
@@ -36,9 +37,49 @@ namespace FoundIT.UserControls
         private void UcitajElemente()
         {
             trenutniKorisnik = RepozitorijKorisnika.DohvatiKorisnika(trenutniKorisnik.IdKorisnika);
-            pictureBox1.Image = trenutniKorisnik.Fotografija;
+            if(trenutniKorisnik.Fotografija != null)
+            {
+                pictureBox1.Image = trenutniKorisnik.Fotografija;
+            }
             emailTextInput.Text = trenutniKorisnik.Email;
             obavijestInput.Checked = trenutniKorisnik.PrimanjeObavijesti;
+            List<Artikl> artikli = RepozitorijArtikala.DohvatiArtikle();
+            List<int> mojArtikli = RepozitorijArtikala.DohvatiMojeArtikle(trenutniKorisnik.IdKorisnika);
+            var mojiArtikliObjekti = artikli.FindAll(x => mojArtikli.Any(y=>x.IdArtikl==y));
+            artiklBindingSource.DataSource = null;
+            artiklBindingSource.DataSource = mojiArtikliObjekti;
+        }
+
+        private void obavijestSpremiClick_Click(object sender, EventArgs e)
+        {
+            RepozitorijKorisnika.PromjeniPrimitakObavijesti(trenutniKorisnik.IdKorisnika, obavijestInput.Checked ? 1 : 0);
+            MessageBox.Show("Uspješno promijenjeno");
+        }
+
+        private void emailSpremiClick_Click(object sender, EventArgs e)
+        {
+            if (!Validacija.ValidirajEmail(emailTextInput.Text))
+            {
+                MessageBox.Show("Email nije u dobrom formatu");
+            }
+            else
+            {
+                MessageBox.Show("Uspješno promijenjeno");
+                RepozitorijKorisnika.PromjeniEmail(trenutniKorisnik.IdKorisnika, emailTextInput.Text);
+            }
+        }
+
+        private void lozinkaSpremiClick_Click(object sender, EventArgs e)
+        {
+            if (!Validacija.ValidirajLozinku(lozinkatextInput.Text))
+            {
+                MessageBox.Show("Lozinka nije u dobrom formatu");
+            }
+            else
+            {
+                MessageBox.Show("Uspješno promijenjeno");
+                RepozitorijKorisnika.PromjeniLozinku(trenutniKorisnik.IdKorisnika, lozinkatextInput.Text);
+            }
         }
     }
 }

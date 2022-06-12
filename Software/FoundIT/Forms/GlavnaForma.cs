@@ -51,11 +51,11 @@ namespace FoundIT.Forms
 
             if (prava == "admin")
             {
-                Button uxDostupnostAutobusaAction2 = new Button();
-                uxDostupnostAutobusaAction2.Text = "Test";
-                uxDostupnostAutobusaAction2.Click += NavigacijskiGumb_Click;
-                uxDostupnostAutobusaAction2.Size = new Size(120, 30);
-                uxNavigacija.Controls.Add(uxDostupnostAutobusaAction2);
+                //Button uxDostupnostAutobusaAction2 = new Button();
+                //uxDostupnostAutobusaAction2.Text = "Test";
+                //uxDostupnostAutobusaAction2.Click += NavigacijskiGumb_Click;
+                //uxDostupnostAutobusaAction2.Size = new Size(120, 30);
+                //uxNavigacija.Controls.Add(uxDostupnostAutobusaAction2);
             }
             Button uxDostupnostAutobusaAction = new Button();
             uxDostupnostAutobusaAction.Text = "Omiljeno";
