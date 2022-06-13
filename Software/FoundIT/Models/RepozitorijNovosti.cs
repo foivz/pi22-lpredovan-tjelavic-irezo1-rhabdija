@@ -37,7 +37,8 @@ namespace FoundIT.Models
 
         static public void DodajNovost(Novost novost, Korisnik korisnik)
         {
-            string upit = String.Format("INSERT INTO novosti values ({0},'{1}','{2}','{3}','{4}');", korisnik.IdKorisnika, novost.Naslov, novost.Datum.ToString(), novost.Kategorija, novost.Sadrzaj);
+            string datum = novost.Datum.ToString("MM/dd/yyyy");
+            string upit = String.Format("INSERT INTO novosti values ({0},'{1}','{2}','{3}','{4}');", korisnik.IdKorisnika, novost.Naslov, datum, novost.Kategorija, novost.Sadrzaj);
             BazaPodataka.Instanca.IzvrsiUpit(upit);
         }
     }
