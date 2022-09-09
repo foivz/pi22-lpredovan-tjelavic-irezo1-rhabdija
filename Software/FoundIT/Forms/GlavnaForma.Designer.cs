@@ -37,7 +37,7 @@ namespace FoundIT.Forms
             // 
             this.uxNavigacija.Location = new System.Drawing.Point(12, 51);
             this.uxNavigacija.Name = "uxNavigacija";
-            this.uxNavigacija.Size = new System.Drawing.Size(1270, 63);
+            this.uxNavigacija.Size = new System.Drawing.Size(1374, 63);
             this.uxNavigacija.TabIndex = 0;
             // 
             // imeOutput
@@ -54,7 +54,7 @@ namespace FoundIT.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1294, 753);
+            this.ClientSize = new System.Drawing.Size(1398, 753);
             this.Controls.Add(this.imeOutput);
             this.Controls.Add(this.uxNavigacija);
             this.Name = "GlavnaForma";

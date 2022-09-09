@@ -60,6 +60,8 @@ namespace FoundIT.UserControls
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.slikaClick = new System.Windows.Forms.Button();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.buttonOstaviRecenziju = new System.Windows.Forms.Button();
+            this.textBoxGreskaOutput = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.artiklBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -94,7 +96,7 @@ namespace FoundIT.UserControls
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(766, 287);
+            this.dataGridView1.Size = new System.Drawing.Size(954, 287);
             this.dataGridView1.TabIndex = 0;
             // 
             // naslovDataGridViewTextBoxColumn
@@ -365,10 +367,33 @@ namespace FoundIT.UserControls
             // 
             this.helpProvider1.HelpNamespace = "FoundIT.chm";
             // 
+            // buttonOstaviRecenziju
+            // 
+            this.buttonOstaviRecenziju.Location = new System.Drawing.Point(963, 345);
+            this.buttonOstaviRecenziju.Name = "buttonOstaviRecenziju";
+            this.buttonOstaviRecenziju.Size = new System.Drawing.Size(170, 46);
+            this.buttonOstaviRecenziju.TabIndex = 34;
+            this.buttonOstaviRecenziju.Text = "Ostavi recenziju";
+            this.buttonOstaviRecenziju.UseVisualStyleBackColor = true;
+            this.buttonOstaviRecenziju.Click += new System.EventHandler(this.buttonOstaviRecenziju_Click);
+            // 
+            // textBoxGreskaOutput
+            // 
+            this.textBoxGreskaOutput.BackColor = System.Drawing.SystemColors.Control;
+            this.textBoxGreskaOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.textBoxGreskaOutput.Location = new System.Drawing.Point(963, 397);
+            this.textBoxGreskaOutput.Multiline = true;
+            this.textBoxGreskaOutput.Name = "textBoxGreskaOutput";
+            this.textBoxGreskaOutput.Size = new System.Drawing.Size(170, 61);
+            this.textBoxGreskaOutput.TabIndex = 35;
+            this.textBoxGreskaOutput.Visible = false;
+            // 
             // MojProfilUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.textBoxGreskaOutput);
+            this.Controls.Add(this.buttonOstaviRecenziju);
             this.Controls.Add(this.slikaClick);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox3);
@@ -428,5 +453,7 @@ namespace FoundIT.UserControls
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button slikaClick;
         private System.Windows.Forms.HelpProvider helpProvider1;
+        private System.Windows.Forms.Button buttonOstaviRecenziju;
+        private System.Windows.Forms.TextBox textBoxGreskaOutput;
     }
 }

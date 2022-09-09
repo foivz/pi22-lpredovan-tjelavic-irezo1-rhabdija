@@ -59,9 +59,9 @@ namespace FoundIT.UserControls
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(6, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 44);
+            this.label1.Size = new System.Drawing.Size(641, 44);
             this.label1.TabIndex = 28;
-            this.label1.Text = "Top knjige";
+            this.label1.Text = "Top 10 knjiga prema izboru korisnika";
             // 
             // helpProvider1
             // 

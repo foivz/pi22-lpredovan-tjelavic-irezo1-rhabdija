@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace FoundIT.UserControls
 {
-    // Iva rezo
+    // Iva rezo i Tea Jelavić
     public partial class KnjigaUC : UserControl
     {
         private Artikl artikl;
@@ -27,6 +27,7 @@ namespace FoundIT.UserControls
         private void PopuniArtikl()
         {
             naslovOutput.Text = artikl.Naslov;
+            autorOutput.Text = artikl.Autor;
             cijenaOutput.Text = artikl.Cijena.ToString();
             zanrOutput.Text = artikl.Zanr;
             poredakOutput.Text = poredak.ToString();

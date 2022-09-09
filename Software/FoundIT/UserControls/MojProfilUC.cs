@@ -1,4 +1,5 @@
-﻿using FoundIT.Models;
+﻿using FoundIT.Forms;
+using FoundIT.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,7 +13,7 @@ using ValidacijaUnosa;
 
 namespace FoundIT.UserControls
 {
-    // Iva rezo
+    // Iva rezo i Tea Jelavić
     public partial class MojProfilUC : UserControl
     {
         private Korisnik trenutniKorisnik;
@@ -81,6 +82,14 @@ namespace FoundIT.UserControls
                 MessageBox.Show("Uspješno promijenjeno");
                 RepozitorijKorisnika.PromjeniLozinku(trenutniKorisnik.IdKorisnika, lozinkatextInput.Text);
             }
+        }
+
+        private void buttonOstaviRecenziju_Click(object sender, EventArgs e)
+        {
+            textBoxGreskaOutput.Visible = false;
+            Artikl artikl = dataGridView1.CurrentRow.DataBoundItem as Artikl;
+            OstaviRecenziju form = new OstaviRecenziju(trenutniKorisnik, artikl);
+            form.ShowDialog();
         }
     }
 }

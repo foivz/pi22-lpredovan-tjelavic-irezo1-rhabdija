@@ -29,13 +29,6 @@ namespace FoundIT.Forms
         {
             string prava = trenutniKorisnik.Status;
 
-            Button uxOdjavaAction = new Button();
-            uxOdjavaAction.Name = "odjava";
-            uxOdjavaAction.Text = "Odjava";
-            uxOdjavaAction.Click += NavigacijskiGumb_Click;
-            uxOdjavaAction.Size = new Size(120, 30);
-            uxNavigacija.Controls.Add(uxOdjavaAction);
-
             Button uxONamaAction = new Button();
             uxONamaAction.Name = "Naslovnica";
             uxONamaAction.Text = "Naslovnica";
@@ -43,25 +36,23 @@ namespace FoundIT.Forms
             uxONamaAction.Size = new Size(120, 30);
             uxNavigacija.Controls.Add(uxONamaAction);
 
+            Button uxKatalogAction = new Button();
+            uxKatalogAction.Text = "Katalog";
+            uxKatalogAction.Click += NavigacijskiGumb_Click;
+            uxKatalogAction.Size = new Size(120, 30);
+            uxNavigacija.Controls.Add(uxKatalogAction);
+
             Button uxPostavkeRacunaAction = new Button();
             uxPostavkeRacunaAction.Text = "Pretraži";
             uxPostavkeRacunaAction.Click += NavigacijskiGumb_Click;
             uxPostavkeRacunaAction.Size = new Size(120, 30);
             uxNavigacija.Controls.Add(uxPostavkeRacunaAction);
 
-            if (prava == "admin")
-            {
-                //Button uxDostupnostAutobusaAction2 = new Button();
-                //uxDostupnostAutobusaAction2.Text = "Test";
-                //uxDostupnostAutobusaAction2.Click += NavigacijskiGumb_Click;
-                //uxDostupnostAutobusaAction2.Size = new Size(120, 30);
-                //uxNavigacija.Controls.Add(uxDostupnostAutobusaAction2);
-            }
-            Button uxDostupnostAutobusaAction = new Button();
-            uxDostupnostAutobusaAction.Text = "Omiljeno";
-            uxDostupnostAutobusaAction.Click += NavigacijskiGumb_Click;
-            uxDostupnostAutobusaAction.Size = new Size(120, 30);
-            uxNavigacija.Controls.Add(uxDostupnostAutobusaAction);
+            Button uxFavoritiAction = new Button();
+            uxFavoritiAction.Text = "Moji favoriti";
+            uxFavoritiAction.Click += NavigacijskiGumb_Click;
+            uxFavoritiAction.Size = new Size(120, 30);
+            uxNavigacija.Controls.Add(uxFavoritiAction);
 
             Button uxStatistikaProdajeAction = new Button();
             uxStatistikaProdajeAction.Text = "Košarica";
@@ -74,6 +65,22 @@ namespace FoundIT.Forms
             uxMojProfilAction.Click += NavigacijskiGumb_Click;
             uxMojProfilAction.Size = new Size(120, 30);
             uxNavigacija.Controls.Add(uxMojProfilAction);
+
+            Button uxOdjavaAction = new Button();
+            uxOdjavaAction.Name = "odjava";
+            uxOdjavaAction.Text = "Odjava";
+            uxOdjavaAction.Click += NavigacijskiGumb_Click;
+            uxOdjavaAction.Size = new Size(120, 30);
+            uxNavigacija.Controls.Add(uxOdjavaAction);
+
+            if (prava == "admin")
+            {
+                Button uxStatistikaAction = new Button();
+                uxStatistikaAction.Text = "Statistika";
+                uxStatistikaAction.Click += NavigacijskiGumb_Click;
+                uxStatistikaAction.Size = new Size(120, 30);
+                uxNavigacija.Controls.Add(uxStatistikaAction);
+            }
 
         }
         private void NavigacijskiGumb_Click(object sender, EventArgs e)
@@ -98,7 +105,21 @@ namespace FoundIT.Forms
                         OdjavaKlik();
                         break;
                     }
-
+                case "Katalog":
+                    {
+                        KatalogKlik();
+                        break;
+                    }
+                case "Moji favoriti":
+                    {
+                        FavoritiKlik();
+                        break;
+                    }
+                case "Statistika":
+                    {
+                        StatistikaKlik();
+                        break;
+                    }
             }
         }
 
@@ -134,7 +155,7 @@ namespace FoundIT.Forms
         }
         public void NaslovnicaKlik()
         {
-            uxTrenutniPrikaz = new NaslovnicaNovostiUC(trenutniKorisnik,this)
+            uxTrenutniPrikaz = new NaslovnicaNovostiUC(trenutniKorisnik, this)
             {
                 Location = new Point(0, 91),
                 Name = "uxTrenutniPrikaz"
@@ -160,6 +181,42 @@ namespace FoundIT.Forms
         private void ProfilKlik()
         {
             uxTrenutniPrikaz = new MojProfilUC(trenutniKorisnik)
+            {
+                Location = new Point(0, 91),
+                Name = "uxTrenutniPrikaz"
+            };
+            ZamjeniStranicu();
+        }
+        public void KatalogKlik()
+        {
+            uxTrenutniPrikaz = new KatalogUC(trenutniKorisnik, this)
+            {
+                Location = new Point(0, 91),
+                Name = "uxTrenutniPrikaz"
+            };
+            ZamjeniStranicu();
+        }
+        public void KatalogRecenzijeKlik(Artikl artikl)
+        {
+            uxTrenutniPrikaz = new RecenzijeUC(artikl, this)
+            {
+                Location = new Point(0, 91),
+                Name = "uxTrenutniPrikaz"
+            };
+            ZamjeniStranicu();
+        }
+        public void FavoritiKlik()
+        {
+            uxTrenutniPrikaz = new FavoritiUC(trenutniKorisnik, this)
+            {
+                Location = new Point(0, 91),
+                Name = "uxTrenutniPrikaz"
+            };
+            ZamjeniStranicu();
+        }
+        public void StatistikaKlik()
+        {
+            uxTrenutniPrikaz = new StatistikaUC()
             {
                 Location = new Point(0, 91),
                 Name = "uxTrenutniPrikaz"
