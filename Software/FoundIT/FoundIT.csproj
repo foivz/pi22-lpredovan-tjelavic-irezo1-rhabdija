@@ -53,6 +53,12 @@
     <Compile Include="Forms\DodajNovost.Designer.cs">
       <DependentUpon>DodajNovost.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\OstaviRecenziju.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OstaviRecenziju.Designer.cs">
+      <DependentUpon>OstaviRecenziju.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\PrijavaRegistracijaForma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,12 +75,29 @@
     <Compile Include="Models\Artikl.cs" />
     <Compile Include="Models\Korisnik.cs" />
     <Compile Include="Models\Novost.cs" />
+    <Compile Include="Models\Recenzija.cs" />
     <Compile Include="Models\RepozitorijArtikala.cs" />
+    <Compile Include="Models\RepozitorijFavorita.cs" />
     <Compile Include="Models\RepozitorijKorisnika.cs" />
     <Compile Include="Models\RepozitorijNovosti.cs" />
     <Compile Include="Models\RepozitorijPomPodataka.cs" />
+    <Compile Include="Models\RepozitorijRacuna.cs" />
+    <Compile Include="Models\RepozitorijRecenzija.cs" />
+    <Compile Include="Models\RepozitorijZanrova.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\ArtiklUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ArtiklUC.Designer.cs">
+      <DependentUpon>ArtiklUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\KatalogUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\KatalogUC.Designer.cs">
+      <DependentUpon>KatalogUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\KnjigaUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -105,11 +128,29 @@
     <Compile Include="UserControls\NovostUC.Designer.cs">
       <DependentUpon>NovostUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\FavoritiUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\FavoritiUC.Designer.cs">
+      <DependentUpon>FavoritiUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\PrijavaUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\PrijavaUC.Designer.cs">
       <DependentUpon>PrijavaUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RecenzijaUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\RecenzijaUC.Designer.cs">
+      <DependentUpon>RecenzijaUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RecenzijeUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\RecenzijeUC.Designer.cs">
+      <DependentUpon>RecenzijeUC.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\RegistracijaUC.cs">
       <SubType>UserControl</SubType>
@@ -117,11 +158,20 @@
     <Compile Include="UserControls\RegistracijaUC.Designer.cs">
       <DependentUpon>RegistracijaUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\StatistikaUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\StatistikaUC.Designer.cs">
+      <DependentUpon>StatistikaUC.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\DodajNovost.resx">
       <DependentUpon>DodajNovost.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\GlavnaForma.resx">
       <DependentUpon>GlavnaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OstaviRecenziju.resx">
+      <DependentUpon>OstaviRecenziju.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PrijavaRegistracijaForma.resx">
       <DependentUpon>PrijavaRegistracijaForma.cs</DependentUpon>
@@ -135,6 +185,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControls\ArtiklUC.resx">
+      <DependentUpon>ArtiklUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\KatalogUC.resx">
+      <DependentUpon>KatalogUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\KnjigaUC.resx">
       <DependentUpon>KnjigaUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,11 +206,23 @@
     <EmbeddedResource Include="UserControls\NovostUC.resx">
       <DependentUpon>NovostUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\FavoritiUC.resx">
+      <DependentUpon>FavoritiUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\PrijavaUC.resx">
       <DependentUpon>PrijavaUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\RecenzijaUC.resx">
+      <DependentUpon>RecenzijaUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\RecenzijeUC.resx">
+      <DependentUpon>RecenzijeUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\RegistracijaUC.resx">
       <DependentUpon>RegistracijaUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\StatistikaUC.resx">
+      <DependentUpon>StatistikaUC.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="FoundIT.chm">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace FoundIT.UserControls
 {
-    // Iva rezo
+    // Iva rezo i Tea Jelavić
     public partial class NaslovnicaKnjigeUC : UserControl
     {
         private Korisnik trenutniKorisnik;
@@ -26,16 +26,20 @@ namespace FoundIT.UserControls
             InitializeComponent();
             UcitajArtikle();
         }
-
+        
         private void uxPrikazClick_Click(object sender, EventArgs e)
         {
             glavnaF.NaslovnicaKlik();
         }
-
         async private void UcitajArtikle()
         {
             await Task.Run(() => DohvatiFavorite());
-            for(int i = 0;i<listaFavorita.Count;i++)
+            int ogranicenje = 10;
+            if(listaFavorita.Count < 10)
+            {
+                ogranicenje = listaFavorita.Count;
+            }
+            for(int i = 0; i < ogranicenje; i++)
             {
                 Artikl ar = listaArtikala.Find(x => x.IdArtikl == listaFavorita[i]);
                 UserControl zaDodat = new KnjigaUC(ar,i+1);
@@ -46,7 +50,7 @@ namespace FoundIT.UserControls
         }
         private void DohvatiFavorite()
         {
-            listaFavorita = RepozitorijArtikala.DohvatiFavorite();
+            listaFavorita = RepozitorijFavorita.DohvatiFavorite();
             listaArtikala = RepozitorijArtikala.DohvatiArtikle();
         }
     }

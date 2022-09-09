@@ -38,7 +38,6 @@ namespace FoundIT.Models
             ISBN = isbn;
             Zanr = zanr;
             Autor = autor;
-
         }
         public Artikl()
         {
